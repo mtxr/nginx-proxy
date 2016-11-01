@@ -1,7 +1,9 @@
 version: '2'
 services:
   nginx-proxy:
-    image: nginx:stable-alpine
+    build:
+      context: ./docker-files
+    image: nginx-proxy
     container_name: nginx-proxy
     ports:
       - "80:80"
