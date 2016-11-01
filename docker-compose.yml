@@ -1,0 +1,19 @@
+version: '2'
+services:
+  nginx-proxy:
+    image: nginx:stable-alpine
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker-files/www:/www
+      - /sites:/sites
+      - /etc/letsencrypt:/etc/letsencrypt
+      - /tmp/nginx-proxy:/tmp
+      - /etc/nginx/nginx.conf
+
+networks:
+  default:
+    external:
+      name: infra
