@@ -1,9 +1,6 @@
 version: '2'
 services:
   nginx-proxy:
-    # build:
-    #   context: ./docker-files
-    # image: nginx-proxy
     image: nginx:stable-alpine
     command: /bin/sh /run.sh
     container_name: 'nginx-proxy'
