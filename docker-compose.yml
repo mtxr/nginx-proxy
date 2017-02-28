@@ -12,7 +12,6 @@ services:
       - ./docker-files/run.sh:/run.sh
       - ./docker-files/nginx.conf:/etc/nginx/nginx.conf
       - /sites:/sites
-      - ./letsencrypt:/etc/letsencrypt
       - /tmp/nginx-proxy:/tmp
 
 networks:
